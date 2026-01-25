@@ -1,29 +1,43 @@
 .home-hero {
-  margin-top: 80px;
+  margin-top: 70px;
   position: relative;
   width: 100%;
-  min-height: calc(90vh - 80px);
+  min-height: calc(90vh - 70px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  overflow: visible;
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
 
   .banner-background {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 
     .banner-image {
       width: 100%;
       height: 100%;
       margin: 0;
+      padding: 0;
       object-fit: cover;
       object-position: center;
       border-radius: 0;
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
     }
 
     &::after {
@@ -37,295 +51,321 @@
       z-index: 2;
       pointer-events: none;
       border-radius: 0;
+      margin: 0;
+      padding: 0;
     }
   }
 
   .hero-content {
     position: relative;
     z-index: 3;
-    padding-left: 200px;
-    // margin-top: 80px;
-    // max-width: 700px; 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    text-align: center;
-
-    .care-tag {
-      background: #FFFF00;
-      color: #2096F3;
-      padding: 2px 20px;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: 700;
-      // text-transform: uppercase;
-      letter-spacing: 0.5px;
-      // box-shadow: 0 4px 12px rgba(255, 255, 0, 0.3);
-      margin-bottom: 10px;
-      align-self: center;
-
-    }
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 20px;
+    text-align: left;
+    padding: 0px 100px 80px 100px;
+    max-width: 800px;
 
     .hero-title {
-      font-size: 64px;
-      font-weight: 700;
+      font-size: 55px;
+      font-weight: 600;
       line-height: 1.2;
-      color: white;
+      color: #0D4E62;
       margin: 0;
-      text-align: center;
+      text-align: left;
     }
 
     .hero-description {
       font-size: 18px;
       line-height: 1.6;
-      color: rgba(255, 255, 255, 0.95);
-      margin: 0 0 10px 0;
-      text-align: center;
-      // max-width: 500px;
+      color: #0D4E62;
+      margin: 0;
+      text-align: left;
+      max-width: 500px;
     }
 
-    .hero-buttons {
+    .hero-stats {
       display: flex;
       gap: 15px;
       margin-top: 10px;
       flex-wrap: wrap;
-      justify-content: center;
-      align-self: center;
 
-      .btn {
-        .btn-icon {
-          font-size: 20px;
+      .stat-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 10px;
+        width: 100px;
+        text-align: center;
+        border-radius: 15px;
+
+        .stat-value {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 2px;
+          font-size: 24px;
+          font-weight: 700;
+          color: white;
+          margin-bottom: 5px;
+          line-height: 1;
+
+          .star-icon {
+            font-size: 25px;
+            color: white;
+          }
         }
-      }
 
-      .btn-solid-blue {
-        .btn-icon {
-          font-size: 20px;
+        .stat-label {
+          font-size: 12px;
+          font-weight: 600;
+          color: white;
+          line-height: 1.2;
         }
       }
     }
 
-    .dha-licensed-badge {
+    .hero-buttons {
       display: flex;
-      align-items: center;
-      gap: 20px;
-      background: white;
-      padding: 10px 30px;
-      border-radius: 30px;
-      margin-top: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      align-self: center;
-
-
-      .check-icon {
-        width: 30px;
-        height: 100%;
-        color: #25D366;
-        flex-shrink: 0;
-      }
-
-      span {
-        font-size: 14px;
-        font-weight: 600;
-        color: #333;
-        letter-spacing: 0.3px;
-      }
+      flex-direction: row;
+      gap: 15px;
+      margin-top: 10px;
     }
   }
 }
 
-@media (max-width: 1400px) {
-  .home-hero {
-    .banner-background {
-      .banner-image {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        object-position: right center;
+.hero-features-section {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0px 30px;
+  background: white;
+  margin-bottom: 30px;
+
+  .feature-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    color: white;
+    // height: 100px;
+
+    .feature-icon-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: #3470A4;
+      border-radius: 100%;
+      overflow: hidden;
+
+      .feature-icon {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
       }
     }
 
-    .hero-content {
-      padding: 0 80px;
-      margin-top: 50px;
-      max-width: 650px;
+    .feature-text {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      justify-content: left;
+      padding-left: 20px;
+      background: #3470A4;
+      height: 50px;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      border-radius: 34px;
+    }
+  }
+}
 
-      .hero-title {
-        font-size: 56px;
-      }
+.hero-stats-mobile {
+  display: none;
+  gap: 15px;
+  padding: 30px;
+  background: white;
+  flex-direction: row;
 
-      .hero-description {
-        font-size: 18px;
+  .stat-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    border-radius: 15px;
+
+    .stat-value {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      font-size: 30px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 5px;
+      line-height: 1;
+
+      .star-icon {
+        font-size: 30px;
+        color: white;
       }
+    }
+
+    .stat-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      line-height: 1.2;
     }
   }
 }
 
 @media (max-width: 1200px) {
   .home-hero {
-    margin-top: 70px;
-
     .banner-background {
       .banner-image {
+        // object-position: right center;
+        object-fit: cover;
         width: 100%;
         height: 100%;
         margin: 0;
-        object-position: right center;
+        padding: 0;
+      }
+
+      &::after {
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        top: -65px;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
 
     .hero-content {
-      padding: 0 60px;
-      margin-top: 50px;
+      padding: 0px 60px 60px 60px;
       max-width: 600px;
 
       .hero-title {
-        font-size: 48px;
+        color: white;
       }
 
       .hero-description {
-        font-size: 17px;
+        color: white;
       }
     }
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .home-hero {
-    min-height: auto;
-    padding-bottom: 60px;
-
-    .banner-background {
-      &::after {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.2);
-      }
-
-      .banner-image {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        object-position: right center;
-      }
-    }
-
-    .hero-content {
-      width: 100%;
-      padding: 0 50px;
-      margin-top: 50px;
-      max-width: 100%;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-
-      .care-tag {
-        align-self: center;
-      }
-
-      .hero-title {
-        font-size: 46px;
-        text-align: center;
-      }
-
-      .hero-description {
-        font-size: 18px;
-        text-align: center;
-      }
-
-      .hero-buttons {
-        justify-content: center;
-        width: 100%;
-        align-self: center;
-      }
-
-      .dha-licensed-badge {
-        align-self: center;
-      }
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .home-hero {
-    position: relative;
-    min-height: 500px;
-    height: 500px;
-    display: flex;
     align-items: flex-end;
     justify-content: center;
+    min-height: 500px;
+    height: 500px;
 
     .banner-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-
-      &::after {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.2);
-      }
-
       .banner-image {
+        // object-position: right center;
+        object-fit: cover;
         width: 100%;
         height: 100%;
         margin: 0;
-        object-position: right center;
+        padding: 0;
+      }
+
+      &::after {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0) 50%,
+          rgba(0, 0, 0, 0.5) 100%
+        );
+        top: -42px;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
 
     .hero-content {
-      position: absolute;
-      bottom: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: calc(100% - 60px);
-      padding: 0;
-      margin-top: 0;
-      gap: 12px;
-      align-items: center;
-      text-align: center;
-
-      .care-tag {
-        display: none;
-      }
+      padding: 0px 30px 60px 30px;
+      max-width: 100%;
 
       .hero-title {
         font-size: 32px;
-        font-weight: 600;
-        margin-bottom: 8px;
+        text-align: center;
+        color: white;
       }
 
       .hero-description {
-        font-size: 18px;
-        margin-bottom: 12px;
+        display: none;
+      }
+
+      .hero-stats {
+        display: none;
       }
 
       .hero-buttons {
-        flex-direction: row;
-        width: auto;
-        gap: 10px;
-        margin-top: 0;
         justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
 
-        .btn {
-          width: auto;
-          justify-content: center;
-          padding: 12px 24px;
-          font-size: 17px;
+  .hero-features-section {
+    display: flex;
+
+    .feature-bar {
+
+      .feature-icon {
+        width: 30px;
+        height: 30px;
+      }
+
+      .feature-text {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .hero-stats-mobile {
+    display: flex;
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    .stat-button {
+      width: 120px;
+      height: 100px;
+      padding: 12px 8px;
+
+      .stat-value {
+        // font-size: 20px;
+
+        .star-icon {
+          // font-size: 20px;
         }
       }
 
-      .dha-licensed-badge {
-        display: none;
+      .stat-label {
+        // font-size: 11px;
       }
     }
   }
@@ -333,84 +373,53 @@
 
 @media (max-width: 480px) {
   .home-hero {
-    margin-top: 50px;
-    position: relative;
     min-height: 450px;
     height: 450px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-
-    .banner-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-
-      &::after {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.2);
-      }
-
-      .banner-image {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        object-position: right center;
-      }
-    }
 
     .hero-content {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: calc(100% - 40px);
-      padding: 0;
-      margin-top: 0;
-      gap: 5px;
-      align-items: center;
-      text-align: center;
-
-      .care-tag {
-        display: none;
-      }
+      padding: 0px 20px 60px 20px;
 
       .hero-title {
         font-size: 28px;
-        font-weight: 600;
-        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .hero-features-section {
+    padding: 0px 20px;
+    gap: 10px;
+
+    .feature-bar {
+
+      .feature-icon {
+        width: 25px;
+        height: 25px;
       }
 
-      .hero-description {
-        font-size: 16px;
-        margin-bottom: 10px;
+      .feature-text {
+        font-size: 14px;
       }
+    }
+  }
 
-      .hero-buttons {
-        flex-direction: row;
-        width: auto;
-        gap: 8px;
-        margin-top: 0;
-        justify-content: center;
+  .hero-stats-mobile {
+    padding: 15px 20px;
+    gap: 10px;
 
-        .btn {
-          width: auto;
-          justify-content: center;
-          padding: 10px 20px;
-          font-size: 16px;
+    .stat-button {
+      // width: 80px;
+      padding: 10px 6px;
 
-          .btn-icon {
-            font-size: 18px;
-          }
+      .stat-value {
+        // font-size: 18px;
+
+        .star-icon {
+          // font-size: 18px;
         }
       }
 
-      .dha-licensed-badge {
-        display: none;
+      .stat-label {
+        // font-size: 10px;
       }
     }
   }

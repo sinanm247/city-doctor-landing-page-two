@@ -1,29 +1,30 @@
 import "./ProcessSection.scss";
-import step1Image from "../../../assets/Images/step-1.png";
-import step2Image from "../../../assets/Images/step-2.png";
-import step3Image from "../../../assets/Images/step-3.png";
+import { FaWhatsapp } from "react-icons/fa";
+import step1Image from "../../../assets/Icons/icon-6.png";
+import step2Image from "../../../assets/Icons/icon-7.png";
+import step3Image from "../../../assets/Icons/icon-8.png";
 
 const steps = [
   {
     id: 1,
-    stepNumber: "Step 1",
+    stepNumber: "1",
     image: step1Image,
-    title: "You Book",
-    description: "Send a WhatsApp or Call"
+    title: "Call or WhatsApp",
+    description: "Call or WhatsApp us at +971 55 154 8684 to request a doctor visit."
   },
   {
     id: 2,
-    stepNumber: "Step 2",
+    stepNumber: "2",
     image: step2Image,
-    title: "We Dispatch",
-    description: "Our nearest medical team heads to your location immediately"
+    title: "Share Your Location",
+    description: "Send your address and preferred time. We confirm instantly."
   },
   {
     id: 3,
-    stepNumber: "Step 3",
+    stepNumber: "3",
     image: step3Image,
-    title: "You Recover",
-    description: "Diagnosis, treatment, and medication happen on your sofa."
+    title: "Doctor at Your Door",
+    description: "A DHA-certified medical team arrives at your home, hotel or office in 30-60 mins"
   }
 ];
 
@@ -33,8 +34,7 @@ const ProcessSection = () => {
       <div className="process-wrapper">
         <h1 className="process-title">Relief Is 3 Steps Away</h1>
         <p className="section-description">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          No apps to download, no complicated portals, no waiting on hold. Just fast access to the best home visiting medical team exactly when you need it.
         </p>
         
         <div className="steps-grid">
@@ -42,12 +42,23 @@ const ProcessSection = () => {
             <div key={step.id} className="step-card">
               <div className="step-image-wrapper">
                 <div className="step-label">{step.stepNumber}</div>
-                <img src={step.image} alt={step.title} className="step-image" />
+                <div className="step-icon-container">
+                  <img src={step.image} alt={step.title} className="step-image" />
+                </div>
               </div>
-              <h3 className="step-title">{step.title}</h3>
-              <p className="step-description">{step.description}</p>
+              <div className="step-content">
+                <h3 className="step-title">{step.title}</h3>
+                <p className="step-description">{step.description}</p>
+              </div>
             </div>
           ))}
+        </div>
+
+        <div className="whatsapp-booking-wrapper">
+          <a href="https://wa.me/971987654321" className="btn whatsapp-btn" target="_blank" rel="noopener noreferrer">
+            <FaWhatsapp className="btn-icon" />
+            Book instantly via WhatsApp
+          </a>
         </div>
       </div>
     </section>

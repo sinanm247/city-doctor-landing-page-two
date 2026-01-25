@@ -12,7 +12,7 @@
     .fixed-btn {
       width: 55px;
       height: 55px;
-      border-radius: 50%;
+      border-radius: 34px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -47,7 +47,7 @@
       }
 
       &.book-online-btn {
-        background: #2096F3;
+        background: #006FAC;
         color: white;
 
         &:hover {
@@ -80,7 +80,7 @@
     .fixed-btn {
       width: 100%;
       padding: 14px 20px;
-      border-radius: 10px;
+      border-radius: 34px;
       font-size: 16px;
       font-weight: 600;
       text-decoration: none;
@@ -117,7 +117,7 @@
       }
 
       &.book-online-btn {
-        background: #2096F3;
+        background: #006FAC;
         color: white;
         box-shadow: 0 4px 16px rgba(32, 150, 243, 0.3);
 

@@ -1,27 +1,42 @@
 import "./WhyChooseUsSection.scss";
-import heroImage from "../../../assets/Images/img-5.png";
-import featureIcon from "../../../assets/Icons/icon2-white.png";
+import { FaWhatsapp } from "react-icons/fa";
+import heroImage from "../../../assets/Images/image-1.png";
+import icon1 from "../../../assets/Icons/icon-1.png";
+import icon2 from "../../../assets/Icons/icon-2.png";
+import icon3 from "../../../assets/Icons/icon-3.png";
+import icon4 from "../../../assets/Icons/icon-4.png";
+import icon5 from "../../../assets/Icons/icon-5.png";
 
 const features = [
   {
     id: 1,
+    icon: icon1,
     title: "Licensed & Safe",
     description: "All staff are DHA/MOH licensed and strictly vetted."
   },
   {
     id: 2,
-    title: "Insurance Accepted",
-    description: "We provide direct billing or reimbursement forms for major insurers"
+    icon: icon2,
+    title: "24/7 Doctor at Home",
+    description: "Day or night, we are ready to visit you anytime."
   },
   {
     id: 3,
-    title: "Faster Than ER",
-    description: "Average arrival time is 35 minutes. No waiting rooms full of sick"
+    icon: icon3,
+    title: "Faster Than Clinics",
+    description: "Doctor ETA within 30-60 minutes. No waiting rooms."
   },
   {
     id: 4,
-    title: "Multilingual",
-    description: "Doctors speak English, Arabic, Hindi, Urdu & Tagalog."
+    icon: icon4,
+    title: "Multilingual Team",
+    description: "Doctors speak English, Arabic, Russian, Hindi and Urdu."
+  },
+  {
+    id: 5,
+    icon: icon5,
+    title: "Trusted by 10,000+ Families",
+    description: "Reliable care across Dubai and the UAE."
   }
 ];
 
@@ -34,12 +49,12 @@ const WhyChooseUsSection = () => {
             <img src={heroImage} alt="City Doctor Hero" className="hero-image" />
           </div>
           <div className="features-container">
-            <h1 className="section-title">Why Uae Residents Trust Us More Than Clinics.</h1>
+            <h1 className="section-title">Why UAE Residents Trust Us More Than Clinics.</h1>
             <div className="features-list">
               {features.map((feature) => (
                 <div key={feature.id} className="feature-item">
                   <div className="feature-icon-wrapper">
-                    <img src={featureIcon} alt={feature.title} className="feature-icon" />
+                    <img src={feature.icon} alt={feature.title} className="feature-icon" />
                   </div>
                   <div className="feature-content">
                     <h3 className="feature-title">{feature.title}</h3>
@@ -47,6 +62,12 @@ const WhyChooseUsSection = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="whatsapp-booking-wrapper">
+              <a href="https://wa.me/971987654321" className="btn whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp className="btn-icon" />
+                Book instantly via WhatsApp
+              </a>
             </div>
           </div>
         </div>

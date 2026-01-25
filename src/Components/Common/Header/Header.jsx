@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import "./Header.scss"
 import logoWhite from "../../../assets/Logo/City-Doctor-Logo.avif"
 import { useLocation } from 'react-router-dom'
-import { IoMdCall } from "react-icons/io"
-import { FaWhatsapp } from "react-icons/fa"
+import service247Icon from "../../../assets/Common/247-service-icon.png"
+import whatsappIcon from "../../../assets/Common/whatsapp.svg"
 
 export default function Header(){
     const location = useLocation()
@@ -38,20 +38,15 @@ export default function Header(){
                 </div>
 
                 <div className="call-div-right">
-                    <div className="call-div">
-                        <IoMdCall className="call-icon" />
-                        Call Us 24/7
+                    <div className="service-button">
+                        <img src={service247Icon} alt="24/7 Services" className="service-icon" />
                     </div>
-                    <a href="tel:8005060">
-                        <div className="call-number">800 50 60</div>
-                    </a>
+                    <div className="whatsapp-button">
+                        <img src={whatsappIcon} alt="WhatsApp" className="whatsapp-icon-btn" />
+                        <span className="whatsapp-number">055 154 8684</span>
+                    </div>
                 </div>
 
-                <div className="whatsapp-button-mobile btn btn-whatsapp">
-                    <a href="https://wa.me/971987654321" target="_blank" rel="noopener noreferrer" className="whatsapp-btn-header">
-                        <FaWhatsapp className="whatsapp-icon" /> WhatsApp
-                    </a>
-                </div>
             </div>
         </nav>
     )
