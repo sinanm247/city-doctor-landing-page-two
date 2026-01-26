@@ -157,10 +157,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 50px;
+      width: 60px;
       height: 50px;
       background: #3470A4;
-      border-radius: 100%;
+      border-radius: 50%;
       overflow: hidden;
 
       .feature-icon {
@@ -295,7 +295,7 @@
           rgba(0, 0, 0, 0) 50%,
           rgba(0, 0, 0, 0.5) 100%
         );
-        top: -42px;
+        top: 0;
         left: 0;
         width: 100%;
         height: 100%;
@@ -329,6 +329,7 @@
   }
 
   .hero-features-section {
+    margin-top: 50px;
     display: flex;
 
     .feature-bar {
@@ -377,10 +378,28 @@
     height: 450px;
 
     .hero-content {
-      padding: 0px 20px 60px 20px;
+      padding: 0px 20px 30px 20px;
 
       .hero-title {
-        font-size: 28px;
+        font-size: 35px;
+      }
+
+      .hero-buttons {
+        .btn.whatsapp-btn {
+          font-size: 20px;
+
+          .btn-icon {
+            font-size: 25px;
+          }
+        }
+
+        .btn.tertiary-btn {
+          font-size: 20px;
+
+          .btn-icon {
+            font-size: 25px;
+          }
+        }
       }
     }
   }

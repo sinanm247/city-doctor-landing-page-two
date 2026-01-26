@@ -121,6 +121,7 @@
           flex-direction: row;
           gap: 20px;
           width: 100%;
+          max-width: 1200px;
           overflow-x: auto;
           overflow-y: hidden;
           scroll-behavior: smooth;
@@ -128,6 +129,13 @@
           -webkit-overflow-scrolling: touch;
           scrollbar-width: none;
           -ms-overflow-style: none;
+          cursor: grab;
+          padding: 0 20px;
+          justify-content: flex-start;
+
+          &:active {
+            cursor: grabbing;
+          }
 
           &::-webkit-scrollbar {
             display: none;
@@ -145,10 +153,12 @@
           transition: all 0.3s ease;
           position: relative;
           margin-top: 30px;
-          min-width: 300px;
-          max-width: 300px;
+          width: 350px;
+          min-width: 350px;
+          max-width: 350px;
           flex-shrink: 0;
-          scroll-snap-align: start;
+          scroll-snap-align: center;
+          cursor: pointer;
 
           &.active {
             background: #006FAC;
@@ -263,11 +273,13 @@
         .testimonial-cards-container {
           .testimonial-carousel {
             gap: 18px;
+            max-width: 1000px;
           }
 
           .testimonial-card {
-            min-width: 280px;
-            max-width: 280px;
+            width: 320px;
+            min-width: 320px;
+            max-width: 320px;
             padding: 35px 25px 25px 25px;
           }
         }
@@ -309,12 +321,15 @@
         .testimonial-cards-container {
           .testimonial-carousel {
             gap: 15px;
+            max-width: 100%;
           }
 
           .testimonial-card {
-            min-width: 260px;
-            max-width: 260px;
+            width: 300px;
+            min-width: 300px;
+            max-width: 300px;
             padding: 35px 20px 20px 20px;
+            scroll-snap-align: center;
 
             .testimonial-avatar {
               width: 65px;
@@ -389,12 +404,14 @@
           .testimonial-carousel {
             gap: 15px;
             padding: 0 10px;
+            max-width: 100%;
           }
 
           .testimonial-card {
-            min-width: calc(100vw - 80px);
-            max-width: calc(100vw - 80px);
+            min-width: calc(60% - 8px);
+            max-width: calc(60% - 8px);
             padding: 35px 25px 25px 25px;
+            scroll-snap-align: center;
 
             .testimonial-avatar {
               width: 60px;
@@ -475,12 +492,14 @@
           .testimonial-carousel {
             gap: 12px;
             padding: 0 5px;
+            max-width: 100%;
           }
 
           .testimonial-card {
-            min-width: calc(100vw - 60px);
-            max-width: calc(100vw - 60px);
+            min-width: calc(60% - 6px);
+            max-width: calc(60% - 6px);
             padding: 30px 20px 20px 20px;
+            scroll-snap-align: center;
 
             .testimonial-avatar {
               width: 55px;

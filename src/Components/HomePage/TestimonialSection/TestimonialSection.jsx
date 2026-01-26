@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./TestimonialSection.scss";
 import { FaQuoteLeft } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
@@ -27,6 +27,20 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?img=47",
     rating: 5,
     review: "My husband was very polly with nearly 40 degres of fever. Dr Shoyab and nurse Rabab provided exceptional care during his visit. He was attentive, thorough, and made sure we understood his treatment options. The results and invoice paper were ready in 24h. Highly"
+  },
+  {
+    id: 4,
+    name: "Elzbieta Cylwik",
+    avatar: "https://i.pravatar.cc/150?img=47",
+    rating: 5,
+    review: "My husband was very polly with nearly 40 degres of fever. Dr Shoyab and nurse Rabab provided exceptional care during his visit. He was attentive, thorough, and made sure we understood his treatment options. The results and invoice paper were ready in 24h. Highly"
+  },
+  {
+    id: 5,
+    name: "Elzbieta Cylwik",
+    avatar: "https://i.pravatar.cc/150?img=47",
+    rating: 5,
+    review: "My husband was very polly with nearly 40 degres of fever. Dr Shoyab and nurse Rabab provided exceptional care during his visit. He was attentive, thorough, and made sure we understood his treatment options. The results and invoice paper were ready in 24h. Highly"
   }
 ];
 
@@ -40,9 +54,114 @@ const userAvatars = [
 
 const TestimonialSection = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
+  const carouselRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  useEffect(() => {
+    scrollToActiveCard();
+  }, [currentIndex]);
+
+  useEffect(() => {
+    // Initial scroll to center on mount
+    setTimeout(() => {
+      scrollToActiveCard();
+    }, 100);
+  }, []);
+
+  const scrollToActiveCard = () => {
+    if (carouselRef.current) {
+      const containerWidth = carouselRef.current.offsetWidth;
+      const cardElement = carouselRef.current.children[currentIndex];
+      if (cardElement) {
+        const cardLeft = cardElement.offsetLeft;
+        const cardWidth = cardElement.offsetWidth;
+        const scrollPosition = cardLeft - (containerWidth / 2) + (cardWidth / 2);
+        
+        carouselRef.current.scrollTo({
+          left: scrollPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
+  };
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    updateActiveCard();
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+    updateActiveCard();
+  };
+
+  const handleTouchStart = (e) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    const x = e.touches[0].pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    updateActiveCard();
+  };
+
+  const updateActiveCard = () => {
+    if (carouselRef.current) {
+      const containerWidth = carouselRef.current.offsetWidth;
+      const scrollPosition = carouselRef.current.scrollLeft;
+      const centerPosition = scrollPosition + (containerWidth / 2);
+      
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+      
+      Array.from(carouselRef.current.children).forEach((card, index) => {
+        const cardLeft = card.offsetLeft;
+        const cardWidth = card.offsetWidth;
+        const cardCenter = cardLeft + (cardWidth / 2);
+        const distance = Math.abs(centerPosition - cardCenter);
+        
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = index;
+        }
+      });
+      
+      setCurrentIndex(closestIndex);
+    }
+  };
+
+  const handleScroll = () => {
+    if (!isDragging) {
+      updateActiveCard();
+    }
   };
 
   return (
@@ -85,11 +204,23 @@ const TestimonialSection = () => {
           </div>
 
           <div className="testimonial-cards-container">
-            <div className="testimonial-carousel">
+            <div 
+              className="testimonial-carousel"
+              ref={carouselRef}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseLeave}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+              onScroll={handleScroll}
+            >
               {testimonials.map((testimonial, index) => (
                 <div 
                   key={testimonial.id} 
                   className={`testimonial-card ${currentIndex === index ? 'active' : ''}`}
+                  onClick={() => goToSlide(index)}
                 >
                   <img 
                     src={testimonial.avatar} 

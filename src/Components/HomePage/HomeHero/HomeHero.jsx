@@ -1,19 +1,23 @@
 import "./HomeHero.scss";
-import bannerImage5 from "../../../assets/Banners/Landing-Page-Banner.png";
+import bannerImage from "../../../assets/Banners/Landing-Page-Banner.png";
+import mobileBannerImage from "../../../assets/Banners/mobile-banner.jpg";
 import { IoMdCall, IoMdStar } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
 import icon11 from "../../../assets/Icons/icon-11.png";
 import icon12 from "../../../assets/Icons/icon-12.png";
 import icon13 from "../../../assets/Icons/icon-13.png";
+import useIsMobile from "../../../Utils/useIsMobile";
 
 export default function HomeHero() {
+  const isMobile = useIsMobile(768);
+
   return (
     <>
       <div className="home-hero">
         <div className="banner-background">
           <img
             className="banner-image"
-            src={bannerImage5}
+            src={isMobile ? mobileBannerImage : bannerImage}
             alt="Doctor At Your Doorstep"
           />
         </div>

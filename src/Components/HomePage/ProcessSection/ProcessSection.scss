@@ -337,12 +337,12 @@
 
     .process-wrapper {
       .process-title {
-        font-size: 24px;
+        font-size: 26px;
         margin-bottom: 10px;
       }
 
       .section-description {
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 25px;
       }
     }
@@ -378,11 +378,12 @@
         gap: 4px;
 
         .step-title {
-          font-size: 15px;
+          font-size: 18px;
         }
 
         .step-description {
-          font-size: 11px;
+          font-size: 14px;
+          line-height: 1;
         }
       }
     }
