@@ -4,12 +4,12 @@ import "./MobileFixedButtons.scss";
 import { IoMdCall } from "react-icons/io";
 
 export default function MobileFixedButtons() {
-  const { openModal } = useBookingModal();
+  // const { openModal } = useBookingModal();
 
   return (
     <div className="mobile-fixed-buttons">
       <a
-        href="https://wa.me/971987654321"
+        href="https://wa.me/+971551548684"
         className="fixed-btn whatsapp-btn"
         target="_blank"
         rel="noopener noreferrer"
@@ -17,14 +17,17 @@ export default function MobileFixedButtons() {
         <FaWhatsapp className="btn-icon" />
         <span className="btn-text">WhatsApp</span>
       </a>
-      <button 
-        onClick={openModal}
+      <a 
+        // onClick={openModal}
+        href="tel:+971551548684"
+        target="_blank"
+        rel="noopener noreferrer"
         className="fixed-btn book-online-btn"
         style={{ background: '#2096F3', color: 'white', border: 'none', cursor: 'pointer' }}
       >
         <IoMdCall className="btn-icon" />
         <span className="btn-text">Call Now</span>
-      </button>
+      </a>
     </div>
   );
 }

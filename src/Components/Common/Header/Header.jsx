@@ -38,13 +38,13 @@ export default function Header(){
                 </div>
 
                 <div className="call-div-right">
-                    <div className="service-button">
+                    <a className="service-button" href="tel:+971551548684" target="_blank" rel="noopener noreferrer">
                         <img src={service247Icon} alt="24/7 Services" className="service-icon" />
-                    </div>
-                    <div className="whatsapp-button">
+                    </a>
+                    <a className="whatsapp-button" href="https://wa.me/+971551548684" target="_blank" rel="noopener noreferrer">
                         <img src={whatsappIcon} alt="WhatsApp" className="whatsapp-icon-btn" />
                         <span className="whatsapp-number">055 154 8684</span>
-                    </div>
+                    </a>
                 </div>
 
             </div>
