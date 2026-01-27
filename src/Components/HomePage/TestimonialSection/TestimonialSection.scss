@@ -1,4 +1,7 @@
+@import '../../../index.scss';
+
 .testimonial-section {
+  padding: 50px 0px;
   background: transparent;
 
   .testimonial-wrapper {
@@ -15,6 +18,7 @@
       text-align: center;
       margin-bottom: 40px;
       max-width: 700px;
+      padding: 0px 30px;
     }
 
     .testimonial-header-section {
@@ -121,7 +125,7 @@
           flex-direction: row;
           gap: 20px;
           width: 100%;
-          max-width: 1200px;
+          max-width: 1130px;
           overflow-x: auto;
           overflow-y: hidden;
           scroll-behavior: smooth;
@@ -161,7 +165,7 @@
           cursor: pointer;
 
           &.active {
-            background: #006FAC;
+            background: $tertiary;
 
             .testimonial-name {
               color: white;
@@ -199,7 +203,7 @@
           .testimonial-name {
             font-size: 18px;
             font-weight: 700;
-            color: #333;
+            color: $tertiary;
             margin-bottom: 10px;
           }
 
@@ -209,14 +213,14 @@
             justify-content: center;
 
             .star-icon {
-              color: #006FAC;
+              color: $tertiary;
               font-size: 15px;
             }
           }
 
           .quote-icon {
             font-size: 20px;
-            color: #006FAC;
+            color: $tertiary;
             margin-bottom: 15px;
           }
 
@@ -251,7 +255,7 @@
             }
 
             &.active {
-              background: #2ED065;
+              background: $primary;
               width: 12px;
               height: 12px;
             }
@@ -307,8 +311,8 @@
 
             .rating-icon-left,
             .rating-icon-right {
-              width: 35px;
-              height: 35px;
+              // width: 35px;
+              // height: 35px;
             }
           }
 
@@ -382,8 +386,8 @@
 
             .rating-icon-left,
             .rating-icon-right {
-              width: 30px;
-              height: 30px;
+              // width: 30px;
+              // height: 30px;
             }
           }
 
@@ -424,17 +428,19 @@
             }
 
             .testimonial-stars {
+              margin-top: 20px;
+
               .star-icon {
-                font-size: 16px;
+                font-size: 25px;
               }
             }
 
             .quote-icon {
-              font-size: 18px;
+              font-size: 25px;
             }
 
             .testimonial-text {
-              font-size: 13px;
+              font-size: 16px;
             }
           }
         }
@@ -447,6 +453,7 @@
   .testimonial-section {
     .testimonial-wrapper {
       .section-title {
+        padding: 0px 10px;
         font-size: 28px;
         margin-bottom: 20px;
       }
@@ -470,8 +477,8 @@
 
             .rating-icon-left,
             .rating-icon-right {
-              width: 25px;
-              height: 25px;
+              width: 50px;
+              height: 50px;
             }
           }
 
@@ -490,7 +497,7 @@
 
         .testimonial-cards-container {
           .testimonial-carousel {
-            gap: 12px;
+            gap: 20px;
             padding: 0 5px;
             max-width: 100%;
           }
@@ -508,21 +515,23 @@
             }
 
             .testimonial-name {
-              font-size: 15px;
+              font-size: 18px;
             }
 
             .testimonial-stars {
+              margin-top: 10px;
+
               .star-icon {
-                font-size: 14px;
+                font-size: 18px;
               }
             }
 
             .quote-icon {
-              font-size: 16px;
+              font-size: 20px;
             }
 
             .testimonial-text {
-              font-size: 12px;
+              font-size: 14px;
             }
           }
         }

@@ -5,33 +5,43 @@ import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 const faqs = [
   {
     id: 1,
-    question: "Do you accept insurance?",
-    answer: "Yes, we provide direct billing or reimbursement forms for major insurers. Our team can help you with the insurance process and documentation needed for claims."
+    question: "How quickly can a doctor arrive?",
+    answer: "Typically within 30–60 minutes from your request, depending on location."
   },
   {
     id: 2,
-    question: "How much does it cost?",
-    answer: "We offer transparent pricing with visit fees clearly communicated before payment. Costs vary based on the service type (doctor visit, nurse visit, lab tests, or IV therapy). Contact us for specific pricing details."
+    question: "What does an at-home doctor consultation include?",
+    answer: "Medical history review, vitals check, clinical examination, treatment plan, and a standard prescription for oral (non-controlled) medications when needed."
   },
   {
     id: 3,
-    question: "Do you come to hotels?",
-    answer: "Yes, we provide medical services at hotels, offices, and homes across Dubai, Abu Dhabi, and Sharjah. Our medical team can visit you wherever you are comfortable."
+    question: "Are your doctors equipped to treat at home?",
+    answer: "Yes. Our doctors arrive with essential medical tools to assess and manage common conditions at home."
   },
   {
     id: 4,
-    question: "Can you give Sick Leave?",
-    answer: "Yes, our DHA-licensed doctors can provide sick notes and medical certificates as part of their consultation. These are official documents recognized by employers and authorities in the UAE."
+    question: "Do you offer 24/7 home visits?",
+    answer: "Yes. Doctor at Home is available 24/7 across Dubai, Abu Dhabi, Sharjah, and Ajman."
   },
   {
     id: 5,
-    question: "Do you come to Home?",
-    answer: "Absolutely! City Doctor specializes in home visits. Our medical team comes directly to your home, hotel, or office. Average arrival time is 30-45 minutes, and you receive full medical examination, prescriptions, and sick notes in the comfort of your location."
+    question: "Which areas do you cover?",
+    answer: "We cover most areas across Dubai, Abu Dhabi, Sharjah, and Ajman."
   },
   {
     id: 6,
-    question: "How Long is Each Session?",
-    answer: "A typical doctor home visit lasts 30-45 minutes, including full examination, diagnosis, prescription, and documentation. Lab test collections take 15-20 minutes, while IV therapy sessions can range from 30 minutes to 2 hours depending on the treatment."
+    question: "How do you ensure hygiene during home visits?",
+    answer: "We follow strict infection-control and hygiene protocols for every visit."
+  },
+  {
+    id: 7,
+    question: "Can your team communicate in multiple languages?",
+    answer: "Yes. Our medical team is multilingual."
+  },
+  {
+    id: 8,
+    question: "Are additional tests and treatments available?",
+    answer: "Yes. If needed, doctors can recommend add-ons such as lab tests, ECG, and IV infusions."
   }
 ];
 
@@ -45,11 +55,7 @@ const FAQSection = () => {
   return (
     <section id="faq" className="faq-section section-container">
       <div className="faq-wrapper">
-        <h1 className="section-title">Got Questions? We've Got Answers!</h1>
-        <p className="faq-description">
-          Find answers to common questions about City Doctor's home medical services. 
-          If you have additional questions, feel free to contact us directly.
-        </p>
+        <h1 className="section-title">Frequently Asked Questions</h1>
 
         <div className="faq-list">
           {faqs.map((faq, index) => (

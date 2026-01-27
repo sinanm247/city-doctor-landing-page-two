@@ -9,47 +9,47 @@ import icon10 from "../../../assets/Icons/icon-10.png";
 const testimonials = [
   {
     id: 1,
-    name: "Elzbieta Cylwik",
-    avatar: "https://i.pravatar.cc/150?img=47",
+    name: "DharNa Ashar",
+    avatar: "https://i.pravatar.cc/150?img=68",
     rating: 5,
-    review: "My husband was very polly with nearly 40 degres of fever. Dr Shoyab and nurse Rabab provided exceptional care during his visit. He was attentive, thorough, and made sure we understood his treatment options. The results and invoice paper were ready in 24h. Highly"
+    review: "Extremely professional and courteous. Fantastic service, on time. Didn't feel the needle at all. Very happy and will definitely rebook them."
   },
   {
     id: 2,
-    name: "Elzbieta Cylwik",
-    avatar: "https://i.pravatar.cc/150?img=47",
+    name: "Maha Al Shamsi",
+    avatar: "https://i.pravatar.cc/150?img=12",
     rating: 5,
-    review: "My husband was very polly with nearly 40 degres of fever. Dr Shoyab and nurse Rabab provided exceptional care during his visit. He was attentive, thorough, and made sure we understood his treatment options. The results and invoice paper were ready in 24h. Highly"
+    review: "I recently used City Doctor in Abu Dhabi and I'm grateful for their exceptional care and professionalism. Lavyank was highly skilled, compassionate, and genuinely cared about my well-being."
   },
   {
     id: 3,
-    name: "Elzbieta Cylwik",
-    avatar: "https://i.pravatar.cc/150?img=47",
+    name: "Jennifer Abu Nasr",
+    avatar: "https://i.pravatar.cc/150?img=33",
     rating: 5,
-    review: "My husband was very polly with nearly 40 degres of fever. Dr Shoyab and nurse Rabab provided exceptional care during his visit. He was attentive, thorough, and made sure we understood his treatment options. The results and invoice paper were ready in 24h. Highly"
+    review: "Perfect service! Thank you to Dr. Hassan and Dr. Adham. They came to my home just after 30 minutes of making the appointment and provided me with the best care for my symptoms!"
   },
   {
     id: 4,
-    name: "Elzbieta Cylwik",
-    avatar: "https://i.pravatar.cc/150?img=47",
+    name: "Fabrizio Speranza",
+    avatar: "https://i.pravatar.cc/150?img=5",
     rating: 5,
-    review: "My husband was very polly with nearly 40 degres of fever. Dr Shoyab and nurse Rabab provided exceptional care during his visit. He was attentive, thorough, and made sure we understood his treatment options. The results and invoice paper were ready in 24h. Highly"
+    review: "Excellent service. Dr. Sadie and Fady were professional and attentive throughout the visit. Highly recommend their home medical services."
   },
   {
     id: 5,
-    name: "Elzbieta Cylwik",
+    name: "Hendrik De Beer",
     avatar: "https://i.pravatar.cc/150?img=47",
     rating: 5,
-    review: "My husband was very polly with nearly 40 degres of fever. Dr Shoyab and nurse Rabab provided exceptional care during his visit. He was attentive, thorough, and made sure we understood his treatment options. The results and invoice paper were ready in 24h. Highly"
+    review: "The Home Service is great! The nurses are professional and highly skilled. I have a monthly recurring appointment with City Doctor Healthcare to help maintain my health."
   }
 ];
 
 const userAvatars = [
-  "https://i.pravatar.cc/150?img=47",
+  "https://i.pravatar.cc/150?img=68",
   "https://i.pravatar.cc/150?img=12",
   "https://i.pravatar.cc/150?img=33",
   "https://i.pravatar.cc/150?img=5",
-  "https://i.pravatar.cc/150?img=68"
+  "https://i.pravatar.cc/150?img=47"
 ];
 
 const TestimonialSection = () => {
@@ -58,9 +58,12 @@ const TestimonialSection = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const isScrollingProgrammatically = useRef(false);
 
   useEffect(() => {
-    scrollToActiveCard();
+    if (carouselRef.current) {
+      scrollToActiveCard();
+    }
   }, [currentIndex]);
 
   useEffect(() => {
@@ -72,6 +75,7 @@ const TestimonialSection = () => {
 
   const scrollToActiveCard = () => {
     if (carouselRef.current) {
+      isScrollingProgrammatically.current = true;
       const containerWidth = carouselRef.current.offsetWidth;
       const cardElement = carouselRef.current.children[currentIndex];
       if (cardElement) {
@@ -83,12 +87,21 @@ const TestimonialSection = () => {
           left: scrollPosition,
           behavior: 'smooth'
         });
+        
+        // Reset the flag after scroll animation completes
+        setTimeout(() => {
+          isScrollingProgrammatically.current = false;
+        }, 500);
+      } else {
+        isScrollingProgrammatically.current = false;
       }
     }
   };
 
   const goToSlide = (index) => {
-    setCurrentIndex(index);
+    if (index !== currentIndex) {
+      setCurrentIndex(index);
+    }
   };
 
   const handleMouseDown = (e) => {
@@ -159,13 +172,13 @@ const TestimonialSection = () => {
   };
 
   const handleScroll = () => {
-    if (!isDragging) {
+    if (!isDragging && !isScrollingProgrammatically.current) {
       updateActiveCard();
     }
   };
 
   return (
-    <section id="testimonials" className="testimonial-section section-container">
+    <section id="testimonials" className="testimonial-section">
       <div className="testimonial-wrapper">
         <h1 className="section-title">Served 50,000+ Across Uae's Top Hotels & Communities</h1>
 
@@ -257,4 +270,3 @@ const TestimonialSection = () => {
 };
 
 export default TestimonialSection;
-
