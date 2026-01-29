@@ -243,6 +243,7 @@
 @media (max-width: 480px) {
     .footer {
         padding: 30px 20px 15px;
+        margin-bottom: 10px;
 
         .footer_content {
             gap: 25px;
@@ -250,19 +251,21 @@
             .footer_col {
                 &.footer_col_logo {
                     .license_text {
-                        font-size: 15px;
+                        font-size: 18px;
+                        font-weight: 600;
                     }
                 }
 
                 &.footer_col_contact,
                 &.footer_col_social {
                     .footer_heading {
-                        font-size: 20px;
+                        font-size: 28px;
                     }
 
                     .contact_details p,
                     .social_description {
-                        font-size: 16px;
+                        font-size: 20px;
+                        font-weight: 500;
                     }
                 }
 
@@ -280,7 +283,8 @@
 
         .footer_copyright {
             .copyright_text {
-                font-size: 14px;
+                font-size: 16px;
+                font-weight: 500;
             }
         }
     }

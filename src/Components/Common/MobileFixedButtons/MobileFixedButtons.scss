@@ -1,3 +1,5 @@
+@import '../../../index.scss';
+
 .mobile-fixed-buttons {
   // Desktop styles - bottom right corner, circular icons only
   @media (min-width: 769px) {
@@ -47,18 +49,34 @@
       }
 
       &.book-online-btn {
-        background: #006FAC;
+        background: $secondary;
         color: white;
 
-        &:hover {
-          background: #036DAB;
-          box-shadow: 0 6px 20px rgba(32, 150, 243, 0.4);
-          transform: translateY(-2px) scale(1.05);
-        }
+        // &:hover {
+        //   background: #036DAB;
+        //   box-shadow: 0 6px 20px rgba(32, 150, 243, 0.4);
+        //   transform: translateY(-2px) scale(1.05);
+        // }
 
         &:active {
           transform: translateY(0) scale(1);
         }
+      }
+    }
+
+    .fixed-btn.book-online-btn {
+      .btn-icon {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+        object-position: center;
+        rotate: -15deg;
+      }
+    }
+
+    .fixed-btn.whatsapp-btn {
+      .btn-icon {
+        font-size: 30px;
       }
     }
   }
@@ -98,6 +116,7 @@
 
       .btn-text {
         display: inline;
+        font-size: 22px;
       }
 
       &.whatsapp-btn {
@@ -117,19 +136,35 @@
       }
 
       &.book-online-btn {
-        background: #006FAC;
+        background: $tertiary;
         color: white;
         box-shadow: 0 4px 16px rgba(32, 150, 243, 0.3);
 
-        &:hover {
-          background: #036DAB;
-          box-shadow: 0 6px 20px rgba(32, 150, 243, 0.4);
-          transform: translateY(-2px);
-        }
+        // &:hover {
+        //   background: #036DAB;
+        //   box-shadow: 0 6px 20px rgba(32, 150, 243, 0.4);
+        //   transform: translateY(-2px);
+        // }
 
         &:active {
           transform: translateY(0);
         }
+      }
+    }
+
+    .fixed-btn.book-online-btn {
+      .btn-icon {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+        object-position: center;
+        rotate: -15deg;
+      }
+    }
+
+    .fixed-btn.whatsapp-btn {
+      .btn-icon {
+        font-size: 30px;
       }
     }
   }

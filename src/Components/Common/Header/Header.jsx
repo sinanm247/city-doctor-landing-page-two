@@ -43,10 +43,9 @@ export default function Header(){
                     </a>
                     <a className="whatsapp-button" href="https://wa.me/+971551548684" target="_blank" rel="noopener noreferrer">
                         <img src={whatsappIcon} alt="WhatsApp" className="whatsapp-icon-btn" />
-                        <span className="whatsapp-number">055 154 8684</span>
+                        <span className="whatsapp-number">+971 55 154 8684</span>
                     </a>
                 </div>
-
             </div>
         </nav>
     )

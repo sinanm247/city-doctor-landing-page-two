@@ -1,7 +1,10 @@
 import "./HomeHero.scss";
 import bannerImage from "../../../assets/Banners/Landing-Page-Banner.png";
 import mobileBannerImage from "../../../assets/Banners/mobile-banner.jpg";
-import { IoMdCall, IoMdStar } from "react-icons/io";
+import phoneIcon from "../../../assets/Icons/phone-icon.png";
+import { IoMdStar } from "react-icons/io";
+import { FaPhone } from "react-icons/fa6";
+
 import { FaWhatsapp } from "react-icons/fa";
 import icon11 from "../../../assets/Icons/icon-11.png";
 import icon12 from "../../../assets/Icons/icon-12.png";
@@ -50,7 +53,7 @@ export default function HomeHero() {
               WhatsApp
             </a>
             <a href="tel:+971551548684" className="btn tertiary-btn" target="_blank" rel="noopener noreferrer">
-              <IoMdCall className="btn-icon" />
+              <img src={phoneIcon} alt="Phone" className="btn-icon" />
               Call Now
             </a>
           </div>

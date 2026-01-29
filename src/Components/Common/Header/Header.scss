@@ -59,10 +59,10 @@
         border-radius: 34px;
         overflow: hidden;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        width: 260px;
+        width: 280px;
 
         .service-button {
-            width: 50%;
+            width: 45%;
             height: 50px;
             background: #006FAC;
             display: flex;
@@ -78,7 +78,7 @@
         }
 
         .whatsapp-button {
-            width: 50%;
+            width: 55%;
             height: 50px;
             background: #2ED065;
             display: flex;
@@ -89,8 +89,8 @@
             border-radius: 0 34px 34px 0;
 
             .whatsapp-icon-btn {
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
                 object-fit: contain;
                 flex-shrink: 0;
             }
@@ -233,8 +233,19 @@
 
         .logo-div {
             .logo {
-                width: 150px;
-                max-height: 75px;
+                width: 130px;
+                max-height: 65px;
+            }
+        }
+
+        .call-div-right {
+            width: 220px;
+
+            .whatsapp-button {
+                .whatsapp-icon-btn {
+                    width: 25px;
+                    height: 25px;
+                }
             }
         }
     }
@@ -243,5 +254,35 @@
         background: white;
         color: #333;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar {
+        padding: 10px 20px;
+        min-height: 55px;
+
+        .logo-div {
+            .logo {
+                width: 120px;
+                max-height: 65px;
+            }
+        }
+
+        .call-div-right {
+            width: 200px;
+
+            .whatsapp-button {
+                width: 60%;
+                .whatsapp-icon-btn {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+            .service-button {
+                width: 40%;
+            }
+        }
     }
 }

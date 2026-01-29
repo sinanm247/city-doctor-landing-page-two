@@ -9,38 +9,38 @@ import icon10 from "../../../assets/Icons/icon-10.png";
 const testimonials = [
   {
     id: 1,
-    name: "DharNa Ashar",
+    name: "Adnan Latheef",
     avatar: "https://i.pravatar.cc/150?img=68",
     rating: 5,
-    review: "Extremely professional and courteous. Fantastic service, on time. Didn't feel the needle at all. Very happy and will definitely rebook them."
+    review: "Booking a doctor at home was simple and the response was quick. The doctor was skilled, polite, and attentive to every detail. The treatment was as good as a hospital consultation. Highly recommend City Doctor."
   },
   {
     id: 2,
-    name: "Maha Al Shamsi",
+    name: "Dr. Anjhula Mya Singh Bais",
     avatar: "https://i.pravatar.cc/150?img=12",
     rating: 5,
-    review: "I recently used City Doctor in Abu Dhabi and I'm grateful for their exceptional care and professionalism. Lavyank was highly skilled, compassionate, and genuinely cared about my well-being."
+    review: "Great patient service. On time, knowledgeable, efficient and flexible. The team provided excellent care and made the entire experience smooth and professional."
   },
   {
     id: 3,
-    name: "Jennifer Abu Nasr",
-    avatar: "https://i.pravatar.cc/150?img=33",
+    name: "May Al-Dabbagh",
+    avatar: "https://i.pravatar.cc/150?img=47",
     rating: 5,
-    review: "Perfect service! Thank you to Dr. Hassan and Dr. Adham. They came to my home just after 30 minutes of making the appointment and provided me with the best care for my symptoms!"
+    review: "This is my second time using their services and they are excellent! I'm grateful for the professionalism and thoroughness of nurse Mahira. The service was punctual and high quality. Definitely deserves five stars!"
   },
   {
     id: 4,
-    name: "Fabrizio Speranza",
+    name: "Emma Robbins",
     avatar: "https://i.pravatar.cc/150?img=5",
     rating: 5,
-    review: "Excellent service. Dr. Sadie and Fady were professional and attentive throughout the visit. Highly recommend their home medical services."
+    review: "Doctor & Nurse arrived after 40 mins of booking. Amazing service. Had flu and cold so received flu IV treatment. Feeling much better and would highly recommend."
   },
   {
     id: 5,
-    name: "Hendrik De Beer",
-    avatar: "https://i.pravatar.cc/150?img=47",
+    name: "DharNa Ashar",
+    avatar: "https://i.pravatar.cc/150?img=33",
     rating: 5,
-    review: "The Home Service is great! The nurses are professional and highly skilled. I have a monthly recurring appointment with City Doctor Healthcare to help maintain my health."
+    review: "Extremely professional and courteous. Fantastic service, on time. Didn't feel the needle at all. Very happy and will definitely rebook them."
   }
 ];
 

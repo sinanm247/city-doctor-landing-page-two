@@ -21,50 +21,50 @@ const services = [
   {
     id: 2,
     image: service2,
-    title: "Food Poisoning & Diarrhea",
-    description: "Stomach infection & loose motions"
-  },
-  {
-    id: 3,
-    image: service3,
-    title: "Nausea & Vomiting",
-    description: "Vomiting, nausea & weakness"
-  },
-  {
-    id: 4,
-    image: service4,
-    title: "Cough & Congestion",
-    description: "Chest congestion & breathing issues"
-  },
-  {
-    id: 5,
-    image: service5,
-    title: "Kids Fever, Vomiting & Rashes",
-    description: "Fever, vomiting & skin rashes in kids"
-  },
-  {
-    id: 6,
-    image: service6,
     title: "UTI Symptoms",
     description: "Burning urination & lower pain"
   },
   {
-    id: 7,
-    image: service7,
+    id: 3,
+    image: service3,
+    title: "Food Poisoning & Diarrhea",
+    description: "Stomach infection & loose motions"
+  },
+  {
+    id: 4,
+    image: service4,
     title: "Headache & Migraine",
     description: "Severe headache & light sensitivity"
   },
   {
-    id: 8,
-    image: service8,
+    id: 5,
+    image: service5,
+    title: "Nausea & Vomiting",
+    description: "Vomiting, nausea & weakness"
+  },
+  {
+    id: 6,
+    image: service6,
     title: "Period Pain & PMS",
     description: "Menstrual pain & PMS symptoms"
   },
   {
-    id: 9,
-    image: service9,
+    id: 7,
+    image: service7,
+    title: "Cough & Congestion",
+    description: "Chest congestion & breathing issues"
+  },
+  {
+    id: 8,
+    image: service8,
     title: "Rash & Allergies",
     description: "Skin rashes, itching & reactions"
+  },
+  {
+    id: 9,
+    image: service9,
+    title: "Kids Fever, Vomiting & Rashes",
+    description: "Fever, vomiting & skin rashes in kids"
   },
   {
     id: 10,
@@ -80,7 +80,7 @@ const ServicesSection = () => {
       <div className="services-wrapper">
         <h1 className="section-title">We Treat You Where You<br/> Are Comfortable</h1>
         <p className="section-description">
-          From diagnosis and lab tests to instant medication—our fully equipped mobile team handles everything at your bedside, so you can start recovering immediately.
+        Proper diagnosis and the right treatment plan at your location. We also provide extended care including lab tests, blood tests, IV drips, nebulization, and more at home.
         </p>
         
         <div className="services-grid">

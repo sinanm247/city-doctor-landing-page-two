@@ -1,7 +1,6 @@
 import { FaWhatsapp } from "react-icons/fa";
-import { useBookingModal } from "../../../Context/BookingModalContext";
 import "./MobileFixedButtons.scss";
-import { IoMdCall } from "react-icons/io";
+import phoneIcon from "../../../assets/Icons/phone-icon.png";
 
 export default function MobileFixedButtons() {
   // const { openModal } = useBookingModal();
@@ -23,9 +22,9 @@ export default function MobileFixedButtons() {
         target="_blank"
         rel="noopener noreferrer"
         className="fixed-btn book-online-btn"
-        style={{ background: '#2096F3', color: 'white', border: 'none', cursor: 'pointer' }}
+        // style={{ background: '#2096F3', color: 'white', border: 'none', cursor: 'pointer' }}
       >
-        <IoMdCall className="btn-icon" />
+        <img src={phoneIcon} alt="Phone" className="btn-icon" />
         <span className="btn-text">Call Now</span>
       </a>
     </div>

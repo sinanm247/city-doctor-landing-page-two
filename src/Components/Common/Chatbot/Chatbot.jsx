@@ -393,8 +393,8 @@ export default function Chatbot() {
                             <p>Our medical team will contact you shortly to assist with booking your service. We typically respond within 30-45 minutes.</p>
                             <div className="contact-info">
                                 <p>📞 For immediate assistance, please call:</p>
-                                <a href="tel:+971501234567" className="phone-link">
-                                    +971 50 123 4567
+                                <a href="tel:+971551548684" className="phone-link">
+                                    +971 55 154 8684
                                 </a>
                             </div>
                         </div>,

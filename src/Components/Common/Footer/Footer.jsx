@@ -23,8 +23,8 @@ export default function Footer() {
                 <div className="footer_col footer_col_contact">
                     <h2 className="footer_heading">Contact Us</h2>
                     <div className="contact_details">
-                        <p>Phone: <a href="tel:8005060">800 50 60</a></p>
-                        <p>WhatsApp: <a href="https://wa.me/971987654321" target="_blank" rel="noopener noreferrer">Click to Chat</a></p>
+                        <p>Phone: <a href="tel:+971551548684">+971 55 154 8684</a></p>
+                        <p>WhatsApp: <a href="https://wa.me/+971551548684" target="_blank" rel="noopener noreferrer">Click to Chat</a></p>
                         <p>Email: <a href="mailto:support@citydoctor.ae">support@citydoctor.ae</a></p>
                     </div>
                 </div>
