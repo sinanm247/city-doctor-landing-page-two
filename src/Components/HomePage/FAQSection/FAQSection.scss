@@ -345,5 +345,43 @@
       }
     }
   }
+
+  @media (max-width: 400px) {
+    .faq-list {
+      gap: 10px;
+    }
+
+    .faq-item {
+      border-radius: 34px;
+
+      .faq-question {
+        padding: 20px 25px;
+
+        .question-text {
+          font-size: 18px;
+        }
+
+        .faq-icon {
+          margin-left: 10px;
+
+          .chevron-icon {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .faq-answer {
+        .answer-content {
+          padding: 0 16px;
+
+          p {
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 14px 0;
+          }
+        }
+      }
+    }
+  }
 }
 
