@@ -348,7 +348,7 @@
             gap: 0px;
 
             .feature-title {
-              font-size: 20px;
+              font-size: 18px;
               line-height: 1.2;
             }
 
@@ -367,62 +367,6 @@
             width: 100%;
             padding: 12px 20px;
             font-size: 18px;
-
-            .btn-icon {
-              font-size: 25px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 420px) {
-  .why-choose-us-section {
-
-    .why-choose-us-wrapper {
-      .features-container {
-        .features-list {
-          // gap: 10px;
-        }
-
-        .feature-item {
-          // gap: 30px;
-
-          // .feature-icon-wrapper {
-          //   width: 40px;
-          //   height: 40px;
-
-          //   .feature-icon {
-          //     width: 20px;
-          //     height: 20px;
-          //   }
-          // }
-
-          .feature-content {
-            gap: 0px;
-
-            .feature-title {
-              font-size: 18px;
-              line-height: 1.1;
-            }
-
-            .feature-description {
-              font-size: 15px;
-            }
-          }
-        }
-
-        .whatsapp-booking-wrapper {
-          justify-content: center;
-          margin-top: 0px;
-
-          .btn {
-            min-width: 100%;
-            width: 100%;
-            padding: 12px 20px;
-            font-size: 16px;
 
             .btn-icon {
               font-size: 25px;

@@ -366,7 +366,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .services-section {
     .services-grid {
       gap: 12px;
@@ -415,65 +415,6 @@
         width: 100%;
         padding: 12px 20px;
         font-size: 18px;
-        font-weight: 500;
-
-        .btn-icon {
-          font-size: 25px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 420px) {
-  .services-section {
-    .services-grid {
-      gap: 12px;
-      margin-bottom: 25px;
-    }
-
-    .service-card {
-      padding: 0;
-      gap: 12px;
-
-      // Reorder items on mobile: left side (odd) first, right side (even) after
-      &:nth-child(odd) {
-        order: 1;
-      }
-
-      &:nth-child(even) {
-        order: 2;
-      }
-
-      .service-image-wrapper {
-        width: 70px;
-        height: 70px;
-      }
-
-      .service-content {
-        min-height: 70px;
-        padding: 8px 12px;
-        gap: 3px;
-
-        .service-title {
-          font-size: 15px;
-        }
-
-        .service-description {
-          font-size: 13px;
-          color: black;
-        }
-      }
-    }
-
-    .whatsapp-booking-wrapper {
-      margin-top: 25px;
-
-      .btn {
-        min-width: 100%;
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 16px;
         font-weight: 500;
 
         .btn-icon {
